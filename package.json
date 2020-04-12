@@ -1,0 +1,16 @@
+{
+  "name": "bxwang.me",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:BoxianWang/bxwang.me.git",
+  "author": "BoxianWang <boxianwangcn@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
