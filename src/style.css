@@ -1,8 +1,8 @@
 
 h1 {
-  font: large courier, sans-serif;
+  font: 50px courier, sans-serif;
   text-align: center;
   margin: auto;
-  border: 3px blue;
+  border: 10px blue;
 
 }
