@@ -14,12 +14,22 @@ h1 {
 }
 
 nav {
+    flex-wrap: wrap;
     padding-top: 10vh;
     text-align: center;
     display: flex;
     justify-content: space-between;
     margin-left: 20%;
     margin-right: 20%
+}
+
+@media screen and (max-width: 995px) {
+    nav {
+        height: 15em;
+        flex-direction: column;
+        align-content: space-around;
+        padding-top: 0;
+    }
 }
 
 nav a {
