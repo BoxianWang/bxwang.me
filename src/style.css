@@ -20,6 +20,7 @@
 }
 
 h1 {
-  font: large "Times", sans-serif;
+  font: large courier, sans-serif;
   text-align: center;
+  margin: auto;
 }
