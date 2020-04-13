@@ -1,8 +1,31 @@
+body {
+    background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
+    padding-top: 30vh
+}
+
 
 h1 {
-  font: 50px courier, sans-serif;
+  font: 800% Georgia, sans-serif;
   text-align: center;
-  margin: auto;
-  border: 10px solid blue;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  color: white;
 
+}
+
+nav {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30%;
+    margin-right: 30%
+}
+
+nav a {
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+}
+nav a:hover {
+    color: yellow;
 }
