@@ -1,42 +1,394 @@
-body {
-    background-image: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
-    padding-top: 25vh
+html, body {
+    margin: 0;
 }
 
-
-h1 {
-  font:  200 600% Raleway, sans-serif;
-  text-align: center;
-  margin-left: 15vw;
-  margin-right: 15vw;
-  color: white;
-
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 nav {
-    flex-wrap: wrap;
-    padding-top: 10vh;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 20%;
-    margin-right: 20%
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10%;
+  width: 100%;
 }
 
-@media screen and (max-width: 995px) {
-    nav {
-        height: 15em;
-        flex-direction: column;
-        align-content: space-around;
-        padding-top: 0;
-    }
+footer {
+  width: 100%;
 }
 
-nav a {
-    font: 100 1.8em Raleway;
-    color: white;
-    text-decoration: none;
+.main-footer {
+  padding: 5px;
+  text-align: center;
+  font: 0.8em Helvetica, sans-serif;
+  line-height: 2em;
+  color: rgb(100,100,100);
 }
-nav a:hover {
-    color: yellow;
+
+.main-footer a {
+  color: inherit;
+  text-decoration: none;
 }
+
+.main-footer a:hover {
+  color: purple;
+  text-decoration: underline;
+}
+
+.main-header {
+  padding: 2em;
+  background-color: rgb(245,245,245);
+  display: inline-flex;
+  justify-content: space-between;
+  box-shadow: 0 0 0 2px grey;
+  align-content: center;
+}
+
+.icon {
+  height: auto;
+  position: fixed;
+  top: 0;
+  align-self: flex-start;
+}
+
+.header-text {
+  line-height: 2em;
+  font: 1.3em Palatino, serif;
+  text-decoration: none;
+  color: rgb(59,79,105);
+  margin-left: 2em;
+  margin-right: 2em;
+  height: auto;
+}
+
+.header-text:before {
+  content: "[";
+  margin-right: 5px;
+  display: inline-block;
+  opacity: 0;
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.header-text:after {
+  content: "]";
+  margin-left: 5px;
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+.header-text:hover:before,
+.header-text:hover:after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+main {
+  background-image: url("bg.jpg");
+  background-size: cover;
+  padding-top: 5%;
+  height: 110%;
+}
+
+h1.intro {
+  font: 600% Georgia, sans-serif;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#name {
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.sub-intro {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 2.5s steps(60, end)
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+
+.content-parent {
+
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.content-1 {
+  text-align: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 50%;
+}
+
+.sub-intro {
+  font: italic 2.3em Garamond, serif;
+}
+
+.content-2 {
+  padding: 1em;
+  text-align: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: center;
+}
+
+.content-box-1 {
+  font: 2em Palatino, serif;
+  padding: 2em;
+  height: 2em;
+  width: 50%;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.content-box-2 {
+  font: 2em Palatino, serif;
+  padding: 2em;
+  height: 2em;
+  width: 50%;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+.content-box-3 {
+  font: 2em Palatino, serif;
+  padding: 2em;
+  height: 2em;
+  width: 50%;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+.content-box-4 {
+  font: 2em Palatino, serif;
+  padding: 2em;
+  height: 2em;
+  width: 50%;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+a.body-link {
+  color: inherit;
+  text-decoration: none;
+  align-self: center;
+}
+
+.hvr-shutter-in-horizontal {
+  padding: 0.1em;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  background: rgb(59,79,105);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-shutter-in-horizontal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e1e1e1;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-shutter-in-horizontal:hover, .hvr-shutter-in-horizontal:focus, .hvr-shutter-in-horizontal:active {
+  color: white;
+}
+.hvr-shutter-in-horizontal:hover:before, .hvr-shutter-in-horizontal:focus:before, .hvr-shutter-in-horizontal:active:before {
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+.bio-title {
+  margin: 1em 1em;
+  text-align: center;
+  font: bold 3em Verdana;
+}
+
+.wrapper-bio {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  width: 100%;
+  margin-bottom: 10em;
+}
+
+.bio-text {
+  position: relative;
+  top: -1em;
+  margin-left: 5em;
+  width: 30%;
+  font: lighter 1em Helvetica, sans-serif;
+}
+
+.comp-title {
+  margin: 1em 1em;
+  text-align: center;
+  font: bold 3em Verdana;
+}
+
+.wrapper-comp {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  width: 100%;
+  margin-bottom: 10em;
+}
+
+.comp-text {
+  position: relative;
+  top: -1em;
+  margin-left: 5em;
+  width: 30%;
+  font: lighter 1em Helvetica, sans-serif;
+}
+
+.misc-title {
+  margin: 1em 1em;
+  text-align: center;
+  font: bold 3em Verdana;
+}
+
+.misc-top {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.misc-box {
+  padding-bottom: 1em;
+  align-self: center;
+  text-align: center;
+  margin: 2em;
+  border-bottom: 1pt solid grey;
+  width: 60%;
+}
+
+.movie-title {
+  text-decoration: none;
+  font: 1.5em Helvetica;
+  line-height: 3em;
+  color: black;
+}
+
+.movie-title:hover {
+  text-decoration: underline;
+  color: rgb(59,79,105);
+}
+
+.misc-sub {
+  font: italic 2em Georgia;
+}
+
+.math-title {
+  margin: 1em 1em;
+  text-align: center;
+  font: bold 3em Verdana;
+}
+
+.math-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.math-item {
+  align-self: center;
+  width: 50%;
+  font: lighter 1em Helvetica;
+}
+
+.math-book {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 994px) {
+
+}
+
